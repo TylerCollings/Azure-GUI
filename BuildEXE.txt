@@ -1,0 +1,11 @@
+# Example code to build TK app into executable
+# Env requires: pyinstaller, pyk4a  
+
+pyinstaller --onefile --add-data "azure_logo.png;." --icon=gui/azure_logo.ico CaptureAzureData.py
+
+move dist\CaptureAzureData.exe
+
+rmdir /s /q build
+rmdir /s /q dist
+del CaptureAzureData.spec
+
